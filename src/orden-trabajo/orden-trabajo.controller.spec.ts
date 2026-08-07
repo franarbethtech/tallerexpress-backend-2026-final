@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { OrdenTrabajoController } from './orden-trabajo.controller';
+import { OrdenTrabajoController } from './ordenTrabajo.controller';
 
 describe('OrdenTrabajoController', () => {
   let controller: OrdenTrabajoController;

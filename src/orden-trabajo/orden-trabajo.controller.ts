@@ -3,7 +3,7 @@ import { ApiTags } from '@nestjs/swagger';
 import { OrdenTrabajo } from '../models/ordenTrabajo.models';
 import { CrearOrdenTrabajoDto } from '../models/dtos/crearOrdenTrabajo.dto';
 import { ActualizarOrdenTrabajoDto } from '../models/dtos/actualizarOrdenTrabajo.dto';
-import { OrdenTrabajoService } from './ordenTrabajo.service';
+import { OrdenTrabajoService } from './orden-trabajo.service';
 
 @ApiTags('OrdenTrabajo')
 @Controller('ordenes-trabajo')

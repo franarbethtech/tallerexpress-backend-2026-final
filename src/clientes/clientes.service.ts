@@ -67,14 +67,20 @@ export class ClientesService {
     actualizarCliente(id: number, actualizarDto: ActualizarClienteDto, ): Cliente {
         const clienteEncontrado = this.obtenerClientePorId(id);
 
-        clienteEncontrado.correoElectronico = actualizarDto.correoElectronico;
+        const correoExistente = this.clientes.find(
+        (clienteGuardado) => clienteGuardado.id !== id && clienteGuardado.correoElectronico === actualizarDto.correoElectronico);
 
-        clienteEncontrado.telefono = actualizarDto.telefono;
-
-        clienteEncontrado.direccion = actualizarDto.direccion;
-
-        return clienteEncontrado;
+        if (correoExistente) {
+            throw new ConflictException(
+            'El correo electrónico ya se encuentra registrado',
+            );
         }
+
+        clienteEncontrado.correoElectronico = actualizarDto.correoElectronico;
+        clienteEncontrado.telefono = actualizarDto.telefono;
+        clienteEncontrado.direccion = actualizarDto.direccion;
+        return clienteEncontrado;
+    }
 
 }
         

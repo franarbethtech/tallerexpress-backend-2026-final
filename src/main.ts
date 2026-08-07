@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   const config = new DocumentBuilder()
  .setTitle('API TallerExpress')
  .setDescription('Esta api describe la plataforma de gestión de un taller mecánico')

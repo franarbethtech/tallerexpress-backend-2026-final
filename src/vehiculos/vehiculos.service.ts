@@ -1,6 +1,6 @@
 import {  BadRequestException,  ConflictException,  Injectable,  NotFoundException,} from '@nestjs/common';
 import { Vehiculo } from '../models/vehiculo.models';
-import { ActualizarVehiculoDto } from '../models/dtos/ActualizarVehiculo.dto';
+import { ActualizarVehiculoDto } from '../models/dtos/actualizarVehiculo.dto';
 import { ClientesService } from '../clientes/clientes.service';
 import { CrearVehiculoDto } from '../models/dtos/crear-vehiculo.dto';
 

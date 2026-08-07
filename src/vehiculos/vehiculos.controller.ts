@@ -1,7 +1,7 @@
 import { ApiTags } from '@nestjs/swagger';
 import { Vehiculo } from '../models/vehiculo.models';
-import { CrearVehiculoDto } from '../models/dtos/crear-vehiculo.dto';
-import { ActualizarVehiculoDto } from '../models/dtos/actualizarVehiculo.dto';
+import { CrearVehiculoDto } from '../models/dtos/CrearVehiculo.dto';
+import { ActualizarVehiculoDto } from '../models/dtos/ActualizarVehiculo.dto';
 import { VehiculosService } from './vehiculos.service';
 import { Controller, Post, Body, Get,Query, Param, Delete, Patch} from '@nestjs/common';
 
